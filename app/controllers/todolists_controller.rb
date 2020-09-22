@@ -12,6 +12,7 @@ class TodolistsController < ApplicationController
   # ２. データをデータベースに保存するためのsaveメソッド実行
   # ３. 投稿詳細画面へリダイレクト
   def index
+    puts "作成したキー #{ENV['SECRET_KEY']}"
     @lists = List.all
   end
   
